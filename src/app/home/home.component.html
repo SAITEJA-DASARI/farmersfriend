@@ -1,0 +1,34 @@
+
+<div class="row" >
+    <div class="col-sm-4 "></div>
+    <div class="col-sm-4 jumbotron bg-dark " style="margin-top: 10px;">
+        <form  #query="ngForm"  (ngSubmit)="onSubmit(query)" >
+            <div class="form-group text-center">
+                <h2 style="color: cornsilk;">welcome farmer</h2>
+            </div>
+            <div class="form-group text-center">
+                <label for="temp" ><h5 style="color: aliceblue; margin-right: 5px;">temperature </h5>
+                    <input type="text" name="temperature" id="temp" placeholder="enter temperature " ngModel  class="form-control" required>
+                </label>
+            </div>
+            <div class=" form-group text-center">
+                <label for="ph" ><h5 style="color: aliceblue;margin-right: 5px">soil ph</h5>
+                    <input type="text" name="ph" id="ph" placeholder="enter soil ph" ngModel  class="form-control" required>
+                </label>
+            </div>
+            <div class=" form-group text-center">
+                <label for="rainfall" ><h5 style="color: aliceblue;margin-right: 5px">rain fall</h5>
+                    <input type="text" name="rainfall" id="rainfall" placeholder="enter rainfall in mm" ngModel  class="form-control" required>
+                </label>
+            </div>
+            <div class=" form-group text-center">
+                <label for="humidity" ><h5 style="color: aliceblue;margin-right: 5px">humidity</h5>
+                    <input type="text" name="humidity" id="humidity" placeholder="enter humidity" ngModel  class="form-control" required>
+                </label>
+            </div>  
+            <div class="text-center">
+                <button type="submit" class="btn btn-light"><h4 style="text-decoration-color: black;" >submit</h4></button>
+            </div> 
+        </form>
+    </div>
+</div>
