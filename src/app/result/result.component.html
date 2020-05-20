@@ -1,1 +1,9 @@
-<p>result works!</p>
+<div *ngIf="predicted_data==undefined" class="loader"></div>
+
+
+<div *ngIf="predicted_data!=undefined">
+    <h1 style="margin-top: 10px;" class="text-center">
+        predicted crop is {{predicted_data}}
+    </h1>
+</div>
+
