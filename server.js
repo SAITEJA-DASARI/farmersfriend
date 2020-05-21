@@ -14,7 +14,10 @@ app.get('/*',(req,res)=>{
 //importing dotenv module
 const env=require('dotenv').config()
 
-const host='0.0.0.0'
+const host =  '0.0.0.0'
+const port = process.env.PORT || 5700
 
-app.listen(process.env.port || 5700 , host);
+app.listen(port || 5700 , host,()=>{
+    console.log(`server running on ${port}`)
+});
 
