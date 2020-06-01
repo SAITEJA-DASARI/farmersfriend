@@ -8,9 +8,14 @@ import { API_URL } from './env';
 })
 export class DataService {
 
-  private userObj
+  private userObj 
+ 
+ 
+
+
   setFormData(f){
     this.userObj=f;
+    console.log(f.temperature)
   }
   constructor(private hc:HttpClient) { }
   getPrediction():Observable<any>{

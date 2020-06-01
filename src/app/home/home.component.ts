@@ -18,6 +18,8 @@ export class HomeComponent implements OnInit {
   onSubmit(query:NgForm){
     this.userObj=query.value;
     this.ds.setFormData(this.userObj);
+    
+
     this.router.navigate(['/result'])
     query.reset()
   }

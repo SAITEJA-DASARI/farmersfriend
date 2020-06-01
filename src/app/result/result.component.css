@@ -1,3 +1,8 @@
+.body {
+  background-image: url("https://images.wallpaperscraft.com/image/rye_ears_field_golden_sky_agriculture_947_1366x768.jpg");
+  background-attachment: fixed;
+}
+
 .loader {
     position: absolute;
     left: 50%;
@@ -15,3 +20,4 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+  

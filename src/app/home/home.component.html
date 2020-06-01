@@ -2,28 +2,66 @@
 <div class="row" >
     <div class="col-sm-4 "></div>
     <div class="col-sm-4 jumbotron bg-dark " style="margin-top: 10px;">
-        <form  #query="ngForm"  (ngSubmit)="onSubmit(query)" >
+        <form  #query="ngForm"  (ngSubmit)="onSubmit(query)"  style="">
             <div class="form-group text-center">
                 <h2 style="color: cornsilk;">welcome farmer</h2>
             </div>
-            <div class="form-group text-center">
+            <!-- <div class="form-group text-center">
                 <label for="temp" ><h5 style="color: aliceblue; margin-right: 5px;">temperature </h5>
                     <input type="text" name="temperature" id="temp" placeholder="enter temperature " ngModel  class="form-control" required>
                 </label>
+            </div> -->
+            <div class="form-group text-center">
+                <label for="temp">
+                    <h5 style="color: aliceblue; margin-right: 5px;">temperature </h5> 
+                    <select ngModel name="temperature"  id="temp" class="browser-default custom-select"  style="width:auto" >
+                        <option value="25" selected >choose temperature &#8451; </option>
+                        <option value="25" >25&#8451; - 30&#8451; </option>
+                        <option value="30" >30&#8451; - 35&#8451;</option>
+                        <option value="35" >35&#8451; - 40&#8451;</option>
+                        <option value="40" >40&#8451; - 45&#8451;</option>
+                        <option value="45" >     greater  than (  > 45&#8451;  )</option>
+                      </select>
+                </label>
             </div>
+            
             <div class=" form-group text-center">
                 <label for="ph" ><h5 style="color: aliceblue;margin-right: 5px">soil ph</h5>
-                    <input type="text" name="ph" id="ph" placeholder="enter soil ph" ngModel  class="form-control" required>
+                    <!-- <input type="text" name="ph" id="ph" placeholder="enter soil ph" ngModel  class="form-control" required> -->
+                    <select ngModel name="ph"  id="ph" class="browser-default custom-select" style="width: auto;"  >
+                        <option value="7" selected >choose soil ph</option>
+                        <option value="6" >acidic (ph < 6)</option>
+                        <option value="6.5" >mild acidic (6 < ph < 7)</option>
+                        <option value="7" >neutral (ph ~ 7)</option>
+                        <option value="7.5" >mild basic(7<ph<7.5)</option>
+                        <option value="8" >basic (ph > 7.5)</option>
+                      </select>
                 </label>
             </div>
             <div class=" form-group text-center">
                 <label for="rainfall" ><h5 style="color: aliceblue;margin-right: 5px">rain fall</h5>
-                    <input type="text" name="rainfall" id="rainfall" placeholder="enter rainfall in mm" ngModel  class="form-control" required>
+                    <!-- <input type="text" name="rainfall" id="rainfall" placeholder="enter rainfall in mm" ngModel  class="form-control" required> -->
+                    <select ngModel name="rainfall"  id="rainfall" class="browser-default custom-select" style="width: auto;" >
+                        <option value="130" selected >choose rainfall</option>
+                        <option value="100" >very low ( < 100 cm )</option>
+                        <option value="120" > low ( 100 - 130 cm )</option>
+                        <option value="150" > average ( 140 -160 cm )</option>
+                        <option value="180" > high (160 - 190 cm)</option>
+                        <option value="230" >very high ( > 200 cm )</option>
+                      </select>
                 </label>
             </div>
             <div class=" form-group text-center">
                 <label for="humidity" ><h5 style="color: aliceblue;margin-right: 5px">humidity</h5>
-                    <input type="text" name="humidity" id="humidity" placeholder="enter humidity" ngModel  class="form-control" required>
+                    <!-- <input type="text" name="humidity" id="humidity" placeholder="enter humidity" ngModel  class="form-control" required> -->
+                    <select ngModel name="humidity"  id="humidity" class="browser-default custom-select" style="width: auto;" >
+                        <option value="56" selected >choose humidity</option>
+                        <option value="30" >very low ( < 35)</option>
+                        <option value="40" >slightly lower ( 40 - 50 )</option>
+                        <option value="55" >average ( ~ 55)</option>
+                        <option value="70" >slightly higher ( 60 - 75 )</option>
+                        <option value="80" >very high ( > 80)</option>
+                      </select>
                 </label>
             </div>  
             <div class="text-center">
